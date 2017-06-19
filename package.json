@@ -1,0 +1,42 @@
+{
+  "name": "gulp-scss",
+  "version": "1.0.0",
+  "description": "gulp scss demo",
+  "main": "index.html",
+  "scripts": {
+    "start": "gulp watch"
+  },
+  "author": "Kirpal Makanga <makanga.kirpal@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-preset-es2015": "^6.14.0",
+    "browser-sync": "^2.16.0",
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-cache": "^0.4.5",
+    "gulp-concat": "^2.6.0",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-flatten": "^0.3.1",
+    "gulp-if": "^2.0.1",
+    "gulp-imagemin": "^3.0.3",
+    "gulp-load-plugins": "^1.3.0",
+    "gulp-sass": "^2.3.2",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^2.0.0"
+  },
+  "dependencies": {
+    "imgwatcher": "github:kirpalmakanga/imgwatcher",
+    "js-cookie": "^2.1.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://LNC2501@bitbucket.org/LNC2501/gulp-scss.git"
+  },
+  "keywords": [
+    "gulp",
+    "scss",
+    "js"
+  ],
+  "homepage": "https://bitbucket.org/LNC2501/gulp-scss#readme"
+}

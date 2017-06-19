@@ -1,0 +1,180 @@
+
+@include font-face( 'Moderne Sans Regular', '#{$font-path}moderne-sans', normal, normal);
+@include font-face( 'Jaapokki', '#{$font-path}jaapokki-regular', normal, normal);
+@include font-face( 'Kontanter', '#{$font-path}kontanter', normal, normal);
+
+body,
+html {
+    height: 100%;
+}
+
+body {
+    font-size: 12px;
+    @media (min-width: 768px) {
+        font-size: 16px;
+    }
+    position: relative;
+    background-color: $blue;
+    font-family: $font-primary;
+    color: $light-grey;
+
+    > .background {
+        background-attachment: fixed;
+        position: fixed;
+    }
+}
+
+.background {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    @include transition(opacity);
+    opacity: 0;
+
+    &.loaded {
+      opacity: 1;
+    }
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 15px;
+    line-height: 0.82em;
+}
+
+svg {
+    display: block;
+    max-width: 100%;
+    height: auto;
+
+    &.icon {
+        fill: #FFFFFF;
+    }
+}
+
+.svg-assets {
+    display: none;
+}
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-transform: uppercase;
+    @include transition(opacity);
+    will-change: opacity;
+    opacity: 0;
+
+    &.loaded {
+        opacity: 1;
+    }
+}
+
+.brand {
+    .logo {
+        margin-top: 0;
+        margin-bottom: 15px;
+        font-size: 16em;
+        @media (min-width: 768px) {
+          font-size: 18em;
+        }
+
+        line-height: 0.82em;
+        font-family: 'Kontanter', sans-serif;
+        letter-spacing: 5px;
+        user-select: none;
+        cursor: default;
+    }
+
+    .desc {
+        font-size: 1.6em;
+        margin-bottom: 0;
+    }
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 40px -5px 0;
+
+    li {
+        padding: 0 5px;
+        display: inline-block;
+
+        a {
+            color: $light-grey;
+            display: block;
+            @include transition(all);
+            opacity: 0.8;
+            will-change: opacity, transform;
+
+            .icon {
+                @include square(30px);
+            }
+
+            &:hover {
+                opacity: 1;
+            }
+
+            &:active {
+                @include scale(1.2);
+            }
+        }
+    }
+}
+
+.cta {
+  margin-top: 40px;
+  button {
+    @include transition();
+    border-radius: 3px;
+    background-color: transparent;
+    padding: 5px 15px;
+    border: 2px solid $light-grey;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    &:not(:first-child) {
+      margin-left: 10px;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &:hover {
+      background-color: fade-out($light-grey, 0.5);
+    }
+
+    &:active {
+      background-color: $light-grey;
+      color: $black;
+    }
+  }
+}
+
+.content {
+  position: relative;
+}
+
+.section {
+    min-height: 100vh;
+    position: relative;
+}

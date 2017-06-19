@@ -1,0 +1,62 @@
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  @include transition();
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: $blue;
+  transform: translateY(-100%);
+
+  .show-contact & {
+    transform: translateY(0);
+  }
+
+  .close-contact {
+    background-color: transparent;
+    border: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    svg {
+      @include transition(transform);
+      height: 40px;
+      width: 40px;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &:active {
+      svg {
+        transform: scale(0.7);
+      }
+    }
+  }
+
+  p {
+      letter-spacing: 0.05em;
+      &:not(:last-of-type) {
+        margin-bottom: 4vh;
+      }
+      @media (min-width: 768px) {
+        font-size: 1.8em;
+      }
+      font-size: 2em;
+      color: $light-grey;
+      display: flex;
+      align-items:center;
+      justify-content: center;
+      .icon {
+          @include square(1em);
+          margin-right: 5px;
+          margin-top: -1px;
+      }
+  }
+}
