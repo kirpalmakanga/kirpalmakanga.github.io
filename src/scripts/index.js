@@ -35,7 +35,7 @@ import Cookies from 'js-cookie'
       'kontanter.ttf',
       'kontanter.woff',
       'kontanter.woff2'
-    ].map((f) => `${window.location.href}/dist/static/fonts/${f}`)
+    ].map((f) => `${window.location.href}/dist/static/${f}`)
 
     imageLoader.init()
 

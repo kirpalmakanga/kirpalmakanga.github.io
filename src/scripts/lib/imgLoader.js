@@ -1,7 +1,3 @@
-/*jshint esversion: 6*/
-/*eslint-env es6*/
-
-
 export default class {
   constructor(options) {
     const defaults = {
@@ -29,7 +25,7 @@ export default class {
   watchProgress = (imgObject) => {
     const { settings, images } = this
     const nbImages = images.length
-    
+
     let percentage = 0
 
     if (this.nbImagesProcessed === nbImages) {
