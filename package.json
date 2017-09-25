@@ -1,42 +1,35 @@
 {
-  "name": "gulp-scss",
+  "name": "MK",
   "version": "1.0.0",
-  "description": "gulp scss demo",
+  "description": "kirpalmakanga.github.io",
   "main": "index.html",
   "scripts": {
-    "start": "gulp watch"
+    "postinstall": "npm run build",
+    "build": "poi build",
+    "watch": "poi"
   },
   "author": "Kirpal Makanga <makanga.kirpal@gmail.com>",
   "license": "ISC",
-  "devDependencies": {
-    "babel-preset-es2015": "^6.14.0",
-    "browser-sync": "^2.16.0",
-    "del": "^2.2.2",
-    "gulp": "^3.9.1",
-    "gulp-babel": "^6.1.2",
-    "gulp-cache": "^0.4.5",
-    "gulp-concat": "^2.6.0",
-    "gulp-cssnano": "^2.1.2",
-    "gulp-flatten": "^0.3.1",
-    "gulp-if": "^2.0.1",
-    "gulp-imagemin": "^3.0.3",
-    "gulp-load-plugins": "^1.3.0",
-    "gulp-sass": "^2.3.2",
-    "gulp-sourcemaps": "^1.6.0",
-    "gulp-uglify": "^2.0.0"
-  },
   "dependencies": {
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-stage-2": "^6.24.1",
     "imgwatcher": "github:kirpalmakanga/imgwatcher",
-    "js-cookie": "^2.1.3"
+    "js-cookie": "^2.1.3",
+    "node-sass": "^4.5.3",
+    "poi": "^9.3.7",
+    "sass-loader": "^6.0.6"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://LNC2501@bitbucket.org/LNC2501/gulp-scss.git"
+    "url": "git+https://github.com/kirpalmakanga/kirpalmakanga.github.io.git"
   },
   "keywords": [
     "gulp",
     "scss",
     "js"
   ],
-  "homepage": "https://bitbucket.org/LNC2501/gulp-scss#readme"
+  "homepage": "https://github.com/kirpalmakanga/kirpalmakanga.github.io"
 }
