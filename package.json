@@ -30,5 +30,6 @@
     "gulp",
     "scss",
     "js"
-  ]
+  ],
+  "homepage": "https://kirpalmakanga.github.io/dist"
 }
