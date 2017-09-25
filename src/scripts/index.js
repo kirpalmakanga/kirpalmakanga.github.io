@@ -48,7 +48,7 @@ import Cookies from 'js-cookie'
       })
     }
 
-    portfolioButton.addEventListener('click', () => scrollToY(portfolio.offsetTop, 1000, 'easeInOutSine'))
+    portfolioButton.addEventListener('click', () => scrollToY(portfolio.offsetTop, 500, 'easeInOutSine'))
 
     openContactButton.addEventListener('click', () => contact.classList.add('contact--show'))
 
