@@ -35,20 +35,22 @@ import Cookies from 'js-cookie'
       'kontanter.ttf',
       'kontanter.woff',
       'kontanter.woff2'
-    ].map((f) => `${window.location.href}/dist/static/${f}`)
+    ].map((f) => `${window.location.origin}/dist/static/${f}`)
 
     imageLoader.init()
 
     if(fontsLoaded) {
       intro.classList.add('loaded')
     } else {
-      loadFonts(fonts, () => {
+      loadFonts(fonts)
+      .then(() => {
+        console.log('fonts loaded')
           intro.classList.add('loaded')
           Cookies.set('fontsLoaded', 'true')
       })
     }
 
-    portfolioButton.addEventListener('click', () => scrollToY(portfolio.offsetTop, 500, 'easeInOutSine'))
+    portfolioButton.addEventListener('click', () => scrollTo(portfolio.offsetTop, 800, 'easeInOutSine'))
 
     openContactButton.addEventListener('click', () => contact.classList.add('contact--show'))
 
