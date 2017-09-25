@@ -1,4 +1,5 @@
 module.exports = () => ({
+  copy: false,
   quiet: false,
   entry: './src/scripts/index.js',
   title: 'MK',
