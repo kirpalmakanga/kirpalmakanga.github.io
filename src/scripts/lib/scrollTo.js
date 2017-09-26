@@ -31,7 +31,6 @@ export default function scrollToY(scrollTargetY = 0, speed = 2000, easing = 'eas
 
             window.scrollTo(0, scrollY + ((scrollTargetY - scrollY) * t))
         } else {
-            console.log('scroll done')
             window.scrollTo(0, scrollTargetY)
         }
     }

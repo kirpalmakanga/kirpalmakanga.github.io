@@ -44,7 +44,6 @@ import Cookies from 'js-cookie'
     } else {
       loadFonts(fonts)
       .then(() => {
-        console.log('fonts loaded')
           intro.classList.add('loaded')
           Cookies.set('fontsLoaded', 'true')
       })
