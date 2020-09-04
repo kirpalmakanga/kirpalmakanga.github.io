@@ -18,7 +18,7 @@
     "babel-preset-stage-2": "^6.24.1",
     "imgwatcher": "github:kirpalmakanga/imgwatcher",
     "js-cookie": "^2.1.3",
-    "node-sass": "^4.5.3",
+    "node-sass": "^4.13.1",
     "poi": "^9.3.7",
     "sass-loader": "^6.0.6"
   },
