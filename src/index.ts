@@ -21,16 +21,9 @@ import Cookies from 'js-cookie';
         onProgress: (img) => img.element.classList.add('loaded')
     });
 
-    const fonts = [
-        'jaapokki-regular.eot',
-        'jaapokki-regular.ttf',
-        'jaapokki-regular.woff',
-        'jaapokki-regular.woff2',
-        'kontanter.eot',
-        'kontanter.ttf',
-        'kontanter.woff',
-        'kontanter.woff2'
-    ].map((f) => `/fonts/${f}`);
+    const fonts = ['jaapokki-regular.woff2', 'kontanter.woff2'].map(
+        (f) => `/fonts/${f}`
+    );
 
     portfolioButton?.addEventListener('click', () =>
         scrollTo(portfolio?.offsetTop, 800, 'easeInOutSine')

@@ -1,10 +1,5 @@
-@include font-face( 'Jaapokki', '#{$font-path}jaapokki-regular', normal, normal);
-@include font-face( 'Kontanter', '#{$font-path}kontanter', normal, normal);
-
-body,
-html {
-    height: 100%;
-}
+@include font-face('Jaapokki', '#{$font-path}jaapokki-regular', normal, normal);
+@include font-face('Kontanter', '#{$font-path}kontanter', normal, normal);
 
 body {
     font-size: 12px;
@@ -34,7 +29,7 @@ body {
     opacity: 0;
 
     &.loaded {
-      opacity: 1;
+        opacity: 1;
     }
 }
 
@@ -61,7 +56,7 @@ svg {
     height: auto;
 
     &.icon {
-        fill: #FFFFFF;
+        fill: #ffffff;
     }
 }
 
@@ -91,7 +86,7 @@ svg {
         margin-bottom: 15px;
         font-size: 16em;
         @media (min-width: 768px) {
-          font-size: 18em;
+            font-size: 18em;
         }
 
         line-height: 0.82em;
@@ -120,9 +115,9 @@ svg {
         a {
             color: $light-grey;
             display: block;
-            @include transition(all);
+            @include transition();
             opacity: 0.8;
-            will-change: opacity, transform;
+            transition-property: opacity, transform;
 
             .icon {
                 @include square(30px);
@@ -140,36 +135,39 @@ svg {
 }
 
 .cta {
-  margin-top: 40px;
-  button {
-    @include transition();
-    border-radius: 3px;
-    background-color: transparent;
-    padding: 5px 15px;
-    border: 2px solid $light-grey;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    &:not(:first-child) {
-      margin-left: 10px;
-    }
+    margin-top: 40px;
+    button {
+        @include transition(background-color);
+        border-radius: 3px;
+        background-color: transparent;
+        padding: 5px 15px;
+        border: 2px solid $light-grey;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        &:not(:first-child) {
+            margin-left: 10px;
+        }
 
-    &:focus {
-      outline: none;
-    }
+        &:focus {
+            outline: none;
+        }
 
-    &:hover {
-      background-color: fade-out($light-grey, 0.5);
-    }
+        &:hover {
+            background-color: fade-out($light-grey, 0.5);
+        }
 
-    &:active {
-      background-color: $light-grey;
-      color: $black;
+        &:active {
+            background-color: $light-grey;
+            color: $black;
+        }
     }
-  }
 }
 
 .content {
-  position: relative;
+    position: relative;
+    opacity: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 .section {
