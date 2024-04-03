@@ -1,10 +1,12 @@
-// bower:scss
-// endbower
-@import "config/_variables";
-@import "config/_mixins";
-@import "config/_normalize";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-@import "common/_global";
+@import 'config/_variables';
+@import 'config/_mixins';
+@import 'config/_normalize';
 
-@import "components/_portfolio";
-@import "components/_contact";
+@import 'common/_global';
+
+@import 'components/_portfolio';
+@import 'components/_contact';
