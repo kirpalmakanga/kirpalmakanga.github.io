@@ -38,6 +38,11 @@
             .content {
                 opacity: 0;
             }
+
+            .contact {
+                transform: translateY(-100%);
+                visibility: hidden;
+            }
         </style>
     </head>
 
@@ -85,8 +90,8 @@
             data-background-src="images/background.svg"
         ></div>
 
-        <main class="content">
-            <section class="section intro">
+        <main class="relative flex flex-col">
+            <section class="min-h-100vh intro">
                 <div class="brand">
                     <h1 class="logo">MK</h1>
 
@@ -125,7 +130,7 @@
                 </div>
             </section>
 
-            <section id="portfolio" class="section portfolio">
+            <section id="portfolio" class="min-h-100vh portfolio">
                 <figure class="portfolio__item">
                     <span
                         class="background preload"

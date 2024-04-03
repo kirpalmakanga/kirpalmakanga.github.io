@@ -1,32 +1,28 @@
 import './styles/main.scss';
-import imgLoader from './lib/imgLoader';
-import loadFonts from './lib/loadFonts';
-import scrollTo from './lib/scrollTo';
-import Cookies from 'js-cookie';
+import ImgLoader from './utils/imgLoader';
+import loadFonts from './utils/loadFonts';
+import cookies from 'js-cookie';
 
 (async () => {
-    const fontsLoaded = Cookies.get('fontsLoaded');
+    const fontsLoaded = cookies.get('fontsLoaded');
     const intro = document.querySelector('.intro');
 
-    const portfolio: HTMLButtonElement | null =
-        document.querySelector('.portfolio');
+    const portfolio = document.querySelector('.portfolio');
     const portfolioButton = document.querySelector('.open-portfolio');
 
     const contact = document.querySelector('.contact');
     const openContactButton = document.querySelector('.open-contact');
     const closeContactButton = document.querySelector('.close-contact');
 
-    const imageLoader = new imgLoader({
+    const imageLoader = new ImgLoader({
         selector: '.preload',
-        onProgress: (img) => img.element.classList.add('loaded')
+        onProgress: ({ element }) => element.classList.add('loaded'),
     });
 
-    const fonts = ['jaapokki-regular.woff2', 'kontanter.woff2'].map(
-        (f) => `/fonts/${f}`
-    );
+    const fonts = ['jaapokki-regular.woff2', 'kontanter.woff2'];
 
     portfolioButton?.addEventListener('click', () =>
-        scrollTo(portfolio?.offsetTop, 800, 'easeInOutSine')
+        portfolio?.scrollIntoView({ behavior: 'smooth' })
     );
 
     openContactButton?.addEventListener('click', () =>
@@ -44,8 +40,10 @@ import Cookies from 'js-cookie';
     } else {
         await loadFonts(fonts);
 
+        // await new Promise((resolve) => setTimeout(resolve, 5000));
+
         intro?.classList.add('loaded');
 
-        Cookies.set('fontsLoaded', 'true');
+        // cookies.set('fontsLoaded', 'true');
     }
 })();

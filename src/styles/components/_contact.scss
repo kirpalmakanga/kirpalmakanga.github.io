@@ -13,6 +13,11 @@
     transform: translateY(-100%);
     visibility: hidden;
 
+    &--show {
+        transform: translateY(0);
+        visibility: visible;
+    }
+
     .close-contact {
         background-color: transparent;
         border: none;
@@ -56,8 +61,4 @@
             margin-top: -1px;
         }
     }
-}
-.contact--show {
-    transform: translateY(0);
-    visibility: visible;
 }
