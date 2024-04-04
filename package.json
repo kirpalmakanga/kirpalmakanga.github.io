@@ -25,6 +25,7 @@
     },
     "dependencies": {
         "@vitejs/plugin-vue": "^5.0.4",
+        "@vueuse/core": "^10.9.0",
         "js-cookie": "^3.0.5",
         "vue": "^3.4.21"
     }
