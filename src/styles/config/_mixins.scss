@@ -6,20 +6,3 @@
         font-style: $font-style;
     }
 }
-
-@mixin rectangle($width, $height) {
-    width: $width;
-    height: $height;
-}
-
-@mixin square($size) {
-    @include rectangle($size, $size);
-}
-
-@mixin transition($property: all, $duration: 0.15s, $easing: ease-out) {
-    transition: $property $duration $easing;
-}
-
-@mixin scale($ratio) {
-    transform: scale($ratio);
-}
