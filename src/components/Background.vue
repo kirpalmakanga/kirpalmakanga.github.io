@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { onMounted, ref } from 'vue';
-import { loadImage } from '../utils/helpers.ts';
+import { loadImage } from '../utils/helpers';
 
 const props = defineProps<{ src: string }>();
 

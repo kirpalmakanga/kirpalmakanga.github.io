@@ -36,7 +36,7 @@ const items = [
                     class="group relative h-[calc(100vh/3-1rem)] md:h-[calc(50vh-1.5rem)]"
                 >
                     <Background
-                        class="absolute inset-0 after:content[''] after:bg-gray-900 after:bg-opacity-50 after:w-full after:h-full after:block"
+                        class="absolute inset-0 after:content[''] after:bg-primary after:bg-opacity-50 after:w-full after:h-full after:block"
                         :src="image"
                     />
 
@@ -58,13 +58,3 @@ const items = [
         </ul>
     </section>
 </template>
-<!--
-  &__item {
-    height: calc(100vh / 3 - 26px);
-    width: calc(100% - 20px);
-    @media (min-width: 768px) {
-      width: calc(50% - 20px);
-      height: calc(50vh - 30px);
-    }
-}
-            -->
