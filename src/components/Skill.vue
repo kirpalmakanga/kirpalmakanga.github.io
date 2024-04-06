@@ -17,7 +17,7 @@ const isVisible = useElementVisibility(wrapper);
             'opacity-100': isVisible,
         }"
     >
-        <p>{{ name }}</p>
+        <p class="text-xl">{{ name }}</p>
         <p v-if="level">Level: {{ level }}</p>
     </div>
 </template>
