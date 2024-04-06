@@ -16,7 +16,7 @@ const emit = defineEmits<{
     >
         <h1 class="text-[16rem]/[14rem] font-secondary">MK</h1>
 
-        <p class="text-2xl">Développeur Web Front-End</p>
+        <p class="text-2xl">Front-End web developer</p>
 
         <ul class="mt-8 flex justify-center gap-4">
             <li>
