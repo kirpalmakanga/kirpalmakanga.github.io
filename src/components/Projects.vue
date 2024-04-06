@@ -1,3 +1,5 @@
 <script setup lang="ts"></script>
 
-<template></template>
+<template>
+    <section id="projects" class="min-h-[100vh]"></section>
+</template>

@@ -4,19 +4,16 @@ import Background from './components/Background.vue';
 import Intro from './components/Intro.vue';
 import Contact from './components/Contact.vue';
 import Skillset from './components/Skillset.vue';
+import Projects from './components/Projects.vue';
 
 const cv = ref<{ wrapper: HTMLDivElement }>();
 const contact = ref<{ wrapper: HTMLDivElement }>();
 
 const scrollToSection = (id: string) => {
-    switch (id) {
-        case 'cv':
-            cv.value?.wrapper.scrollIntoView({ behavior: 'smooth' });
-            break;
+    const element = document.querySelector(`#${id}`);
 
-        case 'contact':
-            contact.value?.wrapper.scrollIntoView({ behavior: 'smooth' });
-            break;
+    if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
     }
 };
 </script>
@@ -28,6 +25,8 @@ const scrollToSection = (id: string) => {
         <Intro @navigate="scrollToSection" />
 
         <Skillset ref="cv" />
+
+        <Projects ref="projects" />
 
         <Contact ref="contact" />
     </main>

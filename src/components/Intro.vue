@@ -1,5 +1,7 @@
 <script setup lang="ts">
-import Icon from './Icon.vue';
+import Icon from './base/Icon.vue';
+import Button from './base/Button.vue';
+import IconLink from './base/IconLink.vue';
 
 const emit = defineEmits<{
     navigate: [e: string];
@@ -18,44 +20,30 @@ const emit = defineEmits<{
 
         <ul class="mt-8 flex justify-center gap-4">
             <li>
-                <a
-                    class="block h-8 w-8 transition hover:opacity-60 active:scale-110"
+                <IconLink
+                    icon="linkedin"
                     href="https://fr.linkedin.com/in/kirpal-makanga-8a4291108"
                     target="_blank"
                     rel="noopener"
-                >
-                    <Icon class="h-8 w-8" name="linkedin" />
-                </a>
+                />
             </li>
 
             <li>
-                <a
-                    class="block h-8 w-8 transition hover:opacity-60 active:scale-110"
+                <IconLink
+                    icon="github"
                     href="https://github.com/kirpalmakanga"
                     target="_blank"
                     rel="noopener"
-                >
-                    <Icon class="h-8 w-8" name="github" />
-                </a>
+                />
             </li>
         </ul>
 
         <ul class="mt-8 flex gap-4">
-            <button
-                id="open-portfolio"
-                class="border-2 border-primary-100 px-4 py-1 rounded uppercase tracking-wide transition hover:bg-primary-100 hover:text-primary active:scale-110"
-                @click="emit('navigate', 'cv')"
-            >
-                CV
-            </button>
+            <Button @click="emit('navigate', 'cv')">CV</Button>
 
-            <button
-                id="open-contact"
-                class="border-2 border-primary-100 px-4 py-1 rounded uppercase tracking-wide transition hover:bg-primary-100 hover:text-primary active:scale-110"
-                @click="emit('navigate', 'contact')"
-            >
-                Contact
-            </button>
+            <Button @click="emit('navigate', 'projects')">Projects</Button>
+
+            <Button @click="emit('navigate', 'contact')">Contact</Button>
         </ul>
     </section>
 </template>

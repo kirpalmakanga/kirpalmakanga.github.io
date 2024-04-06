@@ -1,12 +1,6 @@
 <script setup lang="ts">
-import { ref } from 'vue';
 import Skill from './Skill.vue';
 
-const wrapper = ref<HTMLDivElement>();
-
-defineExpose({ wrapper });
-
-// TODO: mettre le level en pourcentage ?
 const domains = [
     {
         name: 'Front-end',
@@ -104,7 +98,7 @@ const domains = [
 </script>
 
 <template>
-    <section id="cv" ref="wrapper" class="min-h-[100vh] p-4">
+    <section id="cv" class="min-h-[100vh] p-4">
         <h1 class="text-5xl text-center">CV</h1>
 
         <article v-for="{ name, items } of domains" class="mt-8">

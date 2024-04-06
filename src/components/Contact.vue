@@ -1,16 +1,10 @@
 <script setup lang="ts">
-import { ref } from 'vue';
-import Icon from './Icon.vue';
-
-const wrapper = ref<HTMLDivElement>();
-
-defineExpose({ wrapper });
+import Icon from './base/Icon.vue';
 </script>
 
 <template>
     <section
         id="contact"
-        ref="wrapper"
         class="min-h-[100vh] flex flex-col justify-center items-center"
     >
         <h1 class="text-5xl mb-8">Contact</h1>
