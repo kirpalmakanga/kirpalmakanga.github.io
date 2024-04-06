@@ -11,7 +11,7 @@ const isVisible = useElementVisibility(wrapper);
 <template>
     <div
         ref="wrapper"
-        class="bg-primary p-4 rounded shadow transition-opacity duration-500 opacity-0"
+        class="bg-primary-900 p-4 rounded shadow transition-opacity duration-500 opacity-0"
         :class="{ 'opacity-100': isVisible }"
     >
         <p>{{ name }}</p>

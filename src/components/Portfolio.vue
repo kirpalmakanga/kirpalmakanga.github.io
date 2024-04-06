@@ -36,12 +36,12 @@ const items = [
                     class="group relative h-[calc(100vh/3-1rem)] md:h-[calc(50vh-1.5rem)]"
                 >
                     <Background
-                        class="absolute inset-0 after:content[''] after:bg-primary after:bg-opacity-50 after:w-full after:h-full after:block"
+                        class="absolute inset-0 after:content[''] after:bg-primary-950 after:bg-opacity-50 after:w-full after:h-full after:block"
                         :src="image"
                     />
 
                     <figcaption
-                        class="absolute flex flex-col items-center justify-center inset-8 border-2 border-gray-100 transition opacity-0 scale-90 group-hover:opacity-100 group-hover:scale-100"
+                        class="absolute flex flex-col items-center justify-center inset-8 border-2 border-primary-100 transition opacity-0 scale-90 group-hover:opacity-100 group-hover:scale-100"
                     >
                         <h2 class="uppercase">{{ title }}</h2>
                         <p>{{ subtitle }}</p>

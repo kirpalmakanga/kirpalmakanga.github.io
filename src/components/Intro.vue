@@ -43,7 +43,7 @@ const emit = defineEmits<{
         <ul class="mt-8 flex gap-4">
             <button
                 id="open-portfolio"
-                class="border-2 border-gray-100 px-4 py-1 rounded uppercase tracking-wide transition hover:bg-gray-100 hover:text-primary active:scale-110"
+                class="border-2 border-primary-100 px-4 py-1 rounded uppercase tracking-wide transition hover:bg-primary-100 hover:text-primary active:scale-110"
                 @click="emit('navigate', 'cv')"
             >
                 CV
@@ -51,7 +51,7 @@ const emit = defineEmits<{
 
             <button
                 id="open-contact"
-                class="border-2 border-gray-100 px-4 py-1 rounded uppercase tracking-wide transition hover:bg-gray-100 hover:text-primary active:scale-110"
+                class="border-2 border-primary-100 px-4 py-1 rounded uppercase tracking-wide transition hover:bg-primary-100 hover:text-primary active:scale-110"
                 @click="emit('navigate', 'contact')"
             >
                 Contact
