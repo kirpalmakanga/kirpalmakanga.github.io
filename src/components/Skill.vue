@@ -11,8 +11,11 @@ const isVisible = useElementVisibility(wrapper);
 <template>
     <div
         ref="wrapper"
-        class="bg-primary-900 p-4 rounded shadow transition-opacity duration-500 opacity-0"
-        :class="{ 'opacity-100': isVisible }"
+        class="bg-primary-900 p-4 rounded shadow transition-opacity duration-500"
+        :class="{
+            'opacity-0': !isVisible,
+            'opacity-100': isVisible,
+        }"
     >
         <p>{{ name }}</p>
         <p v-if="level">Level: {{ level }}</p>

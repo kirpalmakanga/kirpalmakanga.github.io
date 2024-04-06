@@ -62,7 +62,7 @@ const domains = [
         ],
     },
     {
-        name: 'Outils',
+        name: 'Tools',
         items: [
             { name: 'VS Code' },
             { name: 'Git' },
