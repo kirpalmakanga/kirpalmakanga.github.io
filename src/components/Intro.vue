@@ -38,12 +38,12 @@ const emit = defineEmits<{
             </li>
         </ul>
 
-        <ul class="mt-8 flex gap-4">
+        <nav class="mt-8 flex gap-4">
             <Button @click="emit('navigate', 'cv')">CV</Button>
 
             <Button @click="emit('navigate', 'projects')">Projects</Button>
 
             <Button @click="emit('navigate', 'contact')">Contact</Button>
-        </ul>
+        </nav>
     </section>
 </template>
