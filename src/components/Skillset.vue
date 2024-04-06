@@ -99,16 +99,22 @@ const domains = [
 
 <template>
     <section id="cv" class="min-h-[100vh] p-4">
-        <h1 class="text-5xl text-center">CV</h1>
+        <h2 class="text-5xl text-center mb-8">CV</h2>
 
-        <article v-for="{ name, items } of domains" class="mt-8">
-            <h2 class="text-2xl mb-4">{{ name }}</h2>
+        <ul class="flex flex-col gap-8">
+            <li v-for="{ name, items } of domains">
+                <article>
+                    <h3 class="text-2xl mb-4">{{ name }}</h3>
 
-            <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                <li v-for="skill of items">
-                    <Skill v-bind="skill" />
-                </li>
-            </ul>
-        </article>
+                    <ul
+                        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 auto-rows-max gap-4"
+                    >
+                        <li v-for="skill of items">
+                            <Skill v-bind="skill" />
+                        </li>
+                    </ul>
+                </article>
+            </li>
+        </ul>
     </section>
 </template>

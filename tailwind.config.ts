@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 import colors from 'tailwindcss/colors';
+import plugin from 'tailwindcss/plugin';
 
 export default {
     mode: 'jit',
