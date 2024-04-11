@@ -38,21 +38,10 @@ const domains = [
     {
         name: 'Back-end',
         items: [
-            {
-                name: 'Express',
-            },
-            {
-                name: 'Hapi',
-            },
-            {
-                name: 'AWS SDK',
-            },
-            {
-                name: 'Supabase',
-            },
-            {
-                name: 'Firebase',
-            },
+            { name: 'Express' },
+            { name: 'Hapi' },
+            { name: 'Supabase' },
+            { name: 'Firebase' },
         ],
     },
     {
@@ -71,16 +60,12 @@ const domains = [
             { name: 'Jira' },
             { name: 'Twilio' },
             { name: 'Electron' },
+            { name: 'AWS SDK' },
         ],
     },
     {
         name: 'Other',
-        items: [
-            { name: 'Agile' },
-            {
-                name: 'Functional programming',
-            },
-        ],
+        items: [{ name: 'Agile' }, { name: 'Functional programming' }],
     },
     {
         name: 'Languages',
@@ -99,22 +84,24 @@ const domains = [
 
 <template>
     <section id="cv" class="min-h-[100vh] p-4">
-        <h2 class="text-5xl text-center mb-8">CV</h2>
+        <div class="container mx-auto">
+            <h2 class="text-5xl text-center mb-8">CV</h2>
 
-        <ul class="flex flex-col gap-8">
-            <li v-for="{ name, items } of domains">
-                <article>
-                    <h3 class="text-2xl mb-4">{{ name }}</h3>
+            <ul>
+                <li v-for="{ name, items } of domains" class="mb-16">
+                    <article>
+                        <h3 class="text-2xl mb-4">{{ name }}</h3>
 
-                    <ul
-                        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 auto-rows-max gap-4"
-                    >
-                        <li v-for="skill of items">
-                            <Skill v-bind="skill" />
-                        </li>
-                    </ul>
-                </article>
-            </li>
-        </ul>
+                        <ul
+                            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 auto-rows-max gap-4"
+                        >
+                            <li v-for="skill of items">
+                                <Skill v-bind="skill" />
+                            </li>
+                        </ul>
+                    </article>
+                </li>
+            </ul>
+        </div>
     </section>
 </template>
