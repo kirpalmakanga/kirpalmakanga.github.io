@@ -1,7 +1,8 @@
 <script setup lang="ts">
 import Skill from './Skill.vue';
+import VisibilitySensor from './base/VisibilitySensor.vue';
 
-const domains = [
+const domains: { name: string; items: { name: string; level?: number }[] }[] = [
     {
         name: 'Front-end',
         items: [
@@ -93,10 +94,17 @@ const domains = [
                         <h3 class="text-2xl mb-4">{{ name }}</h3>
 
                         <ul
-                            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 auto-rows-max gap-4"
+                            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 auto-rows-max gap-8"
                         >
-                            <li v-for="skill of items">
-                                <Skill v-bind="skill" />
+                            <li v-for="{ name, level } of items">
+                                <VisibilitySensor>
+                                    <article
+                                        class="bg-primary-900 p-4 rounded shadow"
+                                    >
+                                        <p class="text-xl">{{ name }}</p>
+                                        <p v-if="level">Level: {{ level }}</p>
+                                    </article>
+                                </VisibilitySensor>
                             </li>
                         </ul>
                     </article>

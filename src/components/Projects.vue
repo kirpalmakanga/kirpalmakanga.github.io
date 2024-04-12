@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import ButtonLink from './base/ButtonLink.vue';
+import VisibilitySensor from './base/VisibilitySensor.vue';
 
 const items = [
     {
@@ -39,27 +40,29 @@ const items = [
             <h2 class="text-5xl text-center mb-8">Projects</h2>
 
             <ul
-                class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 auto-rows-max gap-4"
+                class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 auto-rows-max gap-8"
             >
                 <li
                     class="flex"
                     v-for="{ title, desc, technologies, url } of items"
                 >
-                    <article
-                        class="flex flex-col flex-grow bg-primary-900 p-4 gap-4 rounded"
-                    >
-                        <div class="flex-grow">
-                            <h3 class="text-2xl">{{ title }}</h3>
+                    <VisibilitySensor>
+                        <article
+                            class="flex flex-col flex-grow bg-primary-900 p-4 gap-4 rounded"
+                        >
+                            <div class="flex-grow">
+                                <h3 class="text-2xl">{{ title }}</h3>
 
-                            <p class="text-primary-400">{{ desc }}</p>
+                                <p class="text-primary-400">{{ desc }}</p>
 
-                            <p class="mt-4">{{ technologies }}</p>
-                        </div>
+                                <p class="mt-4">{{ technologies }}</p>
+                            </div>
 
-                        <ButtonLink class="self-end" v-if="url" :href="url">
-                            Demo
-                        </ButtonLink>
-                    </article>
+                            <ButtonLink class="self-end" v-if="url" :href="url">
+                                Demo
+                            </ButtonLink>
+                        </article>
+                    </VisibilitySensor>
                 </li>
             </ul>
         </div>
