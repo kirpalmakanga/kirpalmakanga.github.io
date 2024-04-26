@@ -86,7 +86,7 @@ const domains: { name: string; items: { name: string; level?: number }[] }[] = [
 <template>
     <section id="cv" class="min-h-[100vh] p-4">
         <div class="container mx-auto">
-            <h2 class="text-5xl text-center mb-8">CV</h2>
+            <h2 class="text-5xl text-center mb-8">Skills</h2>
 
             <ul>
                 <li v-for="{ name, items } of domains" class="mb-16">
