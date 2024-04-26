@@ -16,7 +16,7 @@ defineProps<{ categories: SkillCategory[] }>();
                         <h3 class="text-2xl mb-4">{{ name }}</h3>
 
                         <ul
-                            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 auto-rows-max gap-8"
+                            class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 auto-rows-max gap-8"
                         >
                             <li v-for="{ name, level } of items" class="flex">
                                 <VisibilitySensor
@@ -24,21 +24,24 @@ defineProps<{ categories: SkillCategory[] }>();
                                 >
                                     <article>
                                         <p class="text-xl">{{ name }}</p>
-                                        <p
+
+                                        <ul
                                             v-if="!isNaN(level)"
-                                            class="whitespace-nowrap"
+                                            class="flex h-5 mt-4 whitespace-nowrap"
                                         >
-                                            <Icon
-                                                v-for="_ in level"
-                                                class="h-6 w-6"
-                                                name="circle-plus"
-                                            />
-                                            <Icon
-                                                v-for="_ in 10 - level"
-                                                class="h-6 w-6"
-                                                name="circle"
-                                            />
-                                        </p>
+                                            <li v-for="_ in level">
+                                                <Icon
+                                                    class="h-5 w-5"
+                                                    name="circle-plus"
+                                                />
+                                            </li>
+                                            <li v-for="_ in 10 - level">
+                                                <Icon
+                                                    class="h-5 w-5"
+                                                    name="circle"
+                                                />
+                                            </li>
+                                        </ul>
                                     </article>
                                 </VisibilitySensor>
                             </li>
