@@ -33,6 +33,8 @@ defineProps<{ items: Project[] }>();
                                 class="self-end mt-4"
                                 v-if="url"
                                 :href="url"
+                                target="_blank"
+                                rel="noopener"
                             >
                                 Demo
                             </ButtonLink>
