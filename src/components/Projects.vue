@@ -53,7 +53,7 @@ const items = [
                             <div class="flex-grow">
                                 <h3 class="text-2xl">{{ title }}</h3>
 
-                                <p class="text-primary-400">{{ desc }}</p>
+                                <p class="opacity-50">{{ desc }}</p>
 
                                 <p class="mt-4">{{ technologies }}</p>
                             </div>
