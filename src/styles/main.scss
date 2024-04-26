@@ -2,6 +2,16 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
-@import 'config/_mixins';
+@mixin font-face($font-family, $file-path, $font-weight, $font-style) {
+    @font-face {
+        font-family: $font-family;
+        src: url('#{$file-path}.woff2') format('woff2');
+        font-weight: $font-weight;
+        font-style: $font-style;
+    }
+}
 
-@import 'common/_global';
+$blue: #171e42;
+
+@include font-face('Jaapokki', '/fonts/jaapokki-regular', normal, normal);
+@include font-face('Kontanter', '/fonts/kontanter', normal, normal);
