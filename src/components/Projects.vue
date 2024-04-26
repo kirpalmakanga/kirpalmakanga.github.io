@@ -2,36 +2,7 @@
 import ButtonLink from './base/ButtonLink.vue';
 import VisibilitySensor from './base/VisibilitySensor.vue';
 
-const items = [
-    {
-        title: 'MicroTube',
-        desc: 'Lightweight YouTube app',
-        technologies:
-            'Solid JS, Vite, Windi CSS, TypeScript, Youtube Data API, Youtube Player API',
-        url: 'https://microtube.netlify.app/',
-    },
-    {
-        title: 'MicroSpot',
-        desc: 'Lightweight Spotify app',
-        technologies: 'Express, Nuxt 3, Windi CSS, Spotify API, TypeScript',
-    },
-    {
-        title: 'Alexandrie',
-        desc: 'Media database',
-        technologies: 'Solid JS, Vite, SASS, TypeScript, Firebase',
-        url: 'https://alexandrie.netlify.app/',
-    },
-    {
-        title: 'Discograph',
-        desc: 'Music database',
-        technologies: 'Nuxt3, Tailwind, TypeScript, Supabase',
-    },
-    {
-        title: 'Neptune',
-        desc: 'Desktop music player',
-        technologies: 'Solid JS, Windi CSS, TypeScript, Electron',
-    },
-];
+defineProps<{ items: Project[] }>();
 </script>
 
 <template>
@@ -46,10 +17,10 @@ const items = [
                     class="flex"
                     v-for="{ title, desc, technologies, url } of items"
                 >
-                    <VisibilitySensor>
-                        <article
-                            class="flex flex-col flex-grow bg-primary-900 p-4 gap-4 rounded"
-                        >
+                    <VisibilitySensor
+                        class="flex flex-col flex-grow bg-primary-900 rounded"
+                    >
+                        <article class="flex flex-col p-4">
                             <div class="flex-grow">
                                 <h3 class="text-2xl">{{ title }}</h3>
 
@@ -58,7 +29,11 @@ const items = [
                                 <p class="mt-4">{{ technologies }}</p>
                             </div>
 
-                            <ButtonLink class="self-end" v-if="url" :href="url">
+                            <ButtonLink
+                                class="self-end mt-4"
+                                v-if="url"
+                                :href="url"
+                            >
                                 Demo
                             </ButtonLink>
                         </article>

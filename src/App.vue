@@ -1,34 +1,33 @@
 <script setup lang="ts">
-import { ref } from 'vue';
+import { onMounted, ref } from 'vue';
 import Background from './components/Background.vue';
 import Intro from './components/Intro.vue';
 import Contact from './components/Contact.vue';
-import Skillset from './components/Skillset.vue';
+import Skills from './components/Skills.vue';
 import Projects from './components/Projects.vue';
+import { getJSON } from './utils/helpers';
 
-const cv = ref<{ wrapper: HTMLDivElement }>();
-const contact = ref<{ wrapper: HTMLDivElement }>();
+const data = ref<{ skills: SkillCategory[]; projects: Project[] }>({
+    skills: [],
+    projects: [],
+});
 
-const scrollToSection = (id: string) => {
-    const element = document.querySelector(`#${id}`);
-
-    if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
-    }
-};
+onMounted(async () => {
+    data.value = await getJSON('/data.json');
+});
 </script>
 
 <template>
     <Background class="fixed inset-0" src="/background.svg" />
 
     <main class="relative flex flex-col">
-        <Intro @navigate="scrollToSection" />
+        <Intro />
 
-        <Skillset ref="cv" />
+        <Skills :categories="data.skills" />
 
-        <Projects ref="projects" />
+        <Projects :items="data.projects" />
 
-        <Contact ref="contact" />
+        <Contact />
     </main>
 </template>
 

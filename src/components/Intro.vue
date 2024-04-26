@@ -1,11 +1,7 @@
 <script setup lang="ts">
-import Icon from './base/Icon.vue';
+import { scrollToId } from '../utils/helpers';
 import Button from './base/Button.vue';
 import IconLink from './base/IconLink.vue';
-
-const emit = defineEmits<{
-    navigate: [e: string];
-}>();
 </script>
 
 <template>
@@ -30,11 +26,11 @@ const emit = defineEmits<{
         </ul>
 
         <nav class="mt-8 flex gap-4">
-            <Button @click="emit('navigate', 'cv')">CV</Button>
+            <Button @click="scrollToId('skills')">Skills</Button>
 
-            <Button @click="emit('navigate', 'projects')">Projects</Button>
+            <Button @click="scrollToId('projects')">Projects</Button>
 
-            <Button @click="emit('navigate', 'contact')">Contact</Button>
+            <Button @click="scrollToId('contact')">Contact</Button>
         </nav>
     </section>
 </template>

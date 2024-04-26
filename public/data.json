@@ -1,0 +1,110 @@
+{
+    "skills": [
+        {
+            "name": "Front-end",
+            "items": [
+                {
+                    "name": "Vue",
+                    "level": 4
+                },
+                {
+                    "name": "React",
+                    "level": 3
+                },
+                {
+                    "name": "React Native",
+                    "level": 3
+                },
+                {
+                    "name": "Solid JS",
+                    "level": 4
+                },
+                {
+                    "name": "Tailwind",
+                    "level": 4
+                },
+                {
+                    "name": "SASS",
+                    "level": 5
+                },
+                {
+                    "name": "Vite",
+                    "level": 5
+                }
+            ]
+        },
+        {
+            "name": "Back-end",
+            "items": [
+                { "name": "Express" },
+                { "name": "Hapi" },
+                { "name": "Supabase" },
+                { "name": "Firebase" }
+            ]
+        },
+        {
+            "name": "Tools",
+            "items": [
+                { "name": "VS Code" },
+                { "name": "Git" },
+                { "name": "Docker" },
+                { "name": "Rancher" },
+                { "name": "Sentry" },
+                { "name": "Jest" },
+                { "name": "Mocha" },
+                { "name": "Puppeteer" },
+                { "name": "Cypress" },
+                { "name": "TypeScript" },
+                { "name": "Jira" },
+                { "name": "Twilio" },
+                { "name": "Electron" },
+                { "name": "AWS SDK" }
+            ]
+        },
+        {
+            "name": "Other",
+            "items": [{ "name": "Agile" }, { "name": "Functional programming" }]
+        },
+        {
+            "name": "Languages",
+            "items": [{ "name": "French" }, { "name": "English" }]
+        },
+        {
+            "name": "Hobbies",
+            "items": [
+                { "name": "Music" },
+                { "name": "Cooking" },
+                { "name": "Video games" }
+            ]
+        }
+    ],
+    "projects": [
+        {
+            "title": "MicroTube",
+            "desc": "Lightweight YouTube app",
+            "technologies": "Solid JS, Vite, Windi CSS, TypeScript, Youtube Data API, Youtube Player API",
+            "url": "https://microtube.netlify.app/"
+        },
+        {
+            "title": "MicroSpot",
+            "desc": "Lightweight Spotify app",
+            "technologies": "Express, Nuxt 3, Windi CSS, Spotify API, TypeScript"
+        },
+        {
+            "title": "Alexandrie",
+            "desc": "Media database",
+            "technologies": "Solid JS, Vite, SASS, TypeScript, Firebase",
+            "url": "https://alexandrie.netlify.app/"
+        },
+        {
+            "title": "Discograph",
+            "desc": "Music database",
+            "technologies": "Nuxt3, Tailwind, TypeScript, Supabase"
+        },
+        {
+            "title": "Neptune",
+            "desc": "Desktop music player",
+            "technologies": "Solid JS, Windi CSS, TypeScript, Electron"
+        }
+    ]
+}
