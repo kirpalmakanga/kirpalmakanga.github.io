@@ -20,7 +20,7 @@ defineProps<{ items: Project[] }>();
                     <VisibilitySensor
                         class="flex flex-col flex-grow bg-primary-900 rounded"
                     >
-                        <article class="flex flex-col p-4">
+                        <article class="flex flex-grow flex-col p-4">
                             <div class="flex-grow">
                                 <h3 class="text-2xl">{{ title }}</h3>
 
