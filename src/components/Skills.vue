@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import Icon from './base/Icon.vue';
 import VisibilitySensor from './base/VisibilitySensor.vue';
 
 defineProps<{ categories: SkillCategory[] }>();
@@ -17,13 +18,27 @@ defineProps<{ categories: SkillCategory[] }>();
                         <ul
                             class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 auto-rows-max gap-8"
                         >
-                            <li v-for="{ name, level } of items">
-                                <VisibilitySensor>
-                                    <article
-                                        class="bg-primary-900 p-4 rounded shadow"
-                                    >
+                            <li v-for="{ name, level } of items" class="flex">
+                                <VisibilitySensor
+                                    class="flex-grow bg-primary-900 p-4 rounded shadow"
+                                >
+                                    <article>
                                         <p class="text-xl">{{ name }}</p>
-                                        <p v-if="level">Level: {{ level }}</p>
+                                        <p
+                                            v-if="!isNaN(level)"
+                                            class="whitespace-nowrap"
+                                        >
+                                            <Icon
+                                                v-for="_ in level"
+                                                class="h-6 w-6"
+                                                name="circle-plus"
+                                            />
+                                            <Icon
+                                                v-for="_ in 10 - level"
+                                                class="h-6 w-6"
+                                                name="circle"
+                                            />
+                                        </p>
                                     </article>
                                 </VisibilitySensor>
                             </li>

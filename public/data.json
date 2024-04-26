@@ -5,60 +5,58 @@
             "items": [
                 {
                     "name": "Vue",
-                    "level": 4
+                    "level": 9
                 },
                 {
                     "name": "React",
-                    "level": 3
+                    "level": 7
                 },
                 {
                     "name": "React Native",
-                    "level": 3
+                    "level": 6
                 },
                 {
                     "name": "Solid JS",
-                    "level": 4
+                    "level": 8
                 },
                 {
                     "name": "Tailwind",
-                    "level": 4
+                    "level": 8
                 },
                 {
                     "name": "SASS",
-                    "level": 5
-                },
-                {
-                    "name": "Vite",
-                    "level": 5
+                    "level": 10
                 }
             ]
         },
         {
             "name": "Back-end",
             "items": [
-                { "name": "Express" },
-                { "name": "Hapi" },
-                { "name": "Supabase" },
-                { "name": "Firebase" }
+                { "name": "Express", "level": 7 },
+                { "name": "Hapi", "level": 7 },
+                { "name": "Supabase", "level": 6 },
+                { "name": "Firebase", "level": 6 },
+                { "name": "Laravel", "level": 2 }
             ]
         },
         {
             "name": "Tools",
             "items": [
+                { "name": "Docker", "level": 7 },
+                { "name": "Jest", "level": 5 },
+                { "name": "Mocha", "level": 5 },
+                { "name": "Puppeteer", "level": 5 },
+                { "name": "Cypress", "level": 5 },
+                { "name": "TypeScript", "level": 6 },
+                { "name": "Electron", "level": 6 },
+                { "name": "AWS SDK", "level": 6 },
+                { "name": "Git", "level": 8 },
                 { "name": "VS Code" },
-                { "name": "Git" },
-                { "name": "Docker" },
                 { "name": "Rancher" },
                 { "name": "Sentry" },
-                { "name": "Jest" },
-                { "name": "Mocha" },
-                { "name": "Puppeteer" },
-                { "name": "Cypress" },
-                { "name": "TypeScript" },
                 { "name": "Jira" },
                 { "name": "Twilio" },
-                { "name": "Electron" },
-                { "name": "AWS SDK" }
+                { "name": "Vite" }
             ]
         },
         {
@@ -68,14 +66,6 @@
         {
             "name": "Languages",
             "items": [{ "name": "French" }, { "name": "English" }]
-        },
-        {
-            "name": "Hobbies",
-            "items": [
-                { "name": "Music" },
-                { "name": "Cooking" },
-                { "name": "Video games" }
-            ]
         }
     ],
     "projects": [
