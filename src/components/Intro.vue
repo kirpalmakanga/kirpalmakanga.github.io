@@ -21,15 +21,6 @@ const emit = defineEmits<{
         <ul class="mt-8 flex justify-center gap-4">
             <li>
                 <IconLink
-                    icon="linkedin"
-                    href="https://fr.linkedin.com/in/kirpal-makanga-8a4291108"
-                    target="_blank"
-                    rel="noopener"
-                />
-            </li>
-
-            <li>
-                <IconLink
                     icon="github"
                     href="https://github.com/kirpalmakanga"
                     target="_blank"
