@@ -4,6 +4,7 @@ declare global {
     interface Job {
         name: string;
         date: string;
+        location: string;
         description: string;
     }
 
