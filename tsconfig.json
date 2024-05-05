@@ -1,23 +1,20 @@
 {
     "compilerOptions": {
-        "forceConsistentCasingInFileNames": true,
-        "jsx": "preserve",
-        "jsxImportSource": "vue",
-        "target": "ESNext",
-        "module": "ESNext",
-        "moduleResolution": "Bundler",
-        "skipLibCheck": true,
-        "isolatedModules": true,
-        "useDefineForClassFields": true,
-        "strict": true,
-        "noImplicitThis": true,
         "esModuleInterop": true,
-        "types": [],
-        "verbatimModuleSyntax": true,
+        "skipLibCheck": true,
+        "target": "es2022",
         "allowJs": true,
-        "noEmit": true,
         "resolveJsonModule": true,
-        "allowSyntheticDefaultImports": true
+        "moduleDetection": "force",
+        "isolatedModules": true,
+        "verbatimModuleSyntax": true,
+        "strict": true,
+        "noUncheckedIndexedAccess": true,
+        "noImplicitOverride": true,
+        "module": "preserve",
+        "noEmit": true,
+        "lib": ["es2022", "dom", "dom.iterable"]
     },
-    "include": ["./**/*"]
+    "include": ["**/*.ts", "**/*.vue"],
+    "exclude": ["node_modules"]
 }
