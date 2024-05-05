@@ -1,4 +1,5 @@
 import colors from 'tailwindcss/colors';
+import typographyPlugin from '@tailwindcss/typography';
 
 export default {
     mode: 'jit',
@@ -10,7 +11,7 @@ export default {
             },
         ],
     },
-    content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
+    content: ['./index.html', './src/**/*.{vue,js,ts}'],
     theme: {
         colors: {
             ...colors,
@@ -33,4 +34,5 @@ export default {
             secondary: ['Kontanter', 'sans-serif'],
         },
     },
+    plugins: [typographyPlugin],
 };

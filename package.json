@@ -17,6 +17,8 @@
     },
     "homepage": "https://kirpalmakanga.github.io/dist",
     "devDependencies": {
+        "@tailwindcss/typography": "^0.5.13",
+        "@types/markdown-it": "^14.1.1",
         "autoprefixer": "^10.4.19",
         "postcss": "^8.4.38",
         "sass": "^1.55.0",
@@ -26,6 +28,7 @@
     "dependencies": {
         "@vitejs/plugin-vue": "^5.0.4",
         "@vueuse/core": "^10.9.0",
+        "markdown-it": "^14.1.0",
         "vue": "^3.4.21"
     }
 }
