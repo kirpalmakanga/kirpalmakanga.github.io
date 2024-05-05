@@ -1,22 +1,22 @@
 <script setup lang="ts">
+import Page from './base/Page.vue';
 import Icon from './base/Icon.vue';
 </script>
 
 <template>
-    <section
+    <Page
         id="contact"
-        class="min-h-[100vh] flex flex-col justify-center items-center"
+        class="flex flex-col justify-center items-center"
+        title="Contact"
     >
-        <h2 class="text-5xl mb-8">Contact</h2>
-
-        <p class="flex gap-2 items-center mb-4 text-3xl">
-            <Icon class="h-8 w-8" name="mail" />
+        <p class="flex gap-2 items-center mb-4 text-2xl sm:text-3xl">
+            <Icon class="h-6 w-6 sm:h-8 sm:w-8" name="mail" />
 
             makanga.kirpal@gmail.com
         </p>
 
-        <p class="flex gap-2 items-center text-3xl">
-            <Icon class="h-8 w-8" name="linkedin" />
+        <p class="flex gap-2 items-center text-2xl sm:text-3xl">
+            <Icon class="h-6 w-6 sm:h-8 sm:w-8" name="linkedin" />
 
             <a
                 class="hover:underline"
@@ -27,5 +27,5 @@ import Icon from './base/Icon.vue';
                 LinkedIn
             </a>
         </p>
-    </section>
+    </Page>
 </template>

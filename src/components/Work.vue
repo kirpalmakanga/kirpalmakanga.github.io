@@ -7,9 +7,9 @@ defineProps<{ categories: SkillCategory[] }>();
 </script>
 
 <template>
-    <Page id="skills" title="Skills">
+    <Page id="work" title="Work">
         <div class="container mx-auto">
-            <ul>
+            <!-- <ul>
                 <li v-for="{ name, items } of categories" class="mb-16">
                     <article>
                         <h3 class="text-2xl mb-4">{{ name }}</h3>
@@ -47,7 +47,7 @@ defineProps<{ categories: SkillCategory[] }>();
                         </ul>
                     </article>
                 </li>
-            </ul>
+            </ul> -->
         </div>
     </Page>
 </template>

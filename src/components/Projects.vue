@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import Page from './base/Page.vue';
 import ButtonLink from './base/ButtonLink.vue';
 import VisibilitySensor from './base/VisibilitySensor.vue';
 
@@ -6,7 +7,7 @@ defineProps<{ items: Project[] }>();
 </script>
 
 <template>
-    <section id="projects" class="min-h-[100vh] p-4">
+    <Page id="projects">
         <div class="container mx-auto">
             <h2 class="text-5xl text-center mb-8">Projects</h2>
 
@@ -43,5 +44,5 @@ defineProps<{ items: Project[] }>();
                 </li>
             </ul>
         </div>
-    </section>
+    </Page>
 </template>

@@ -7,10 +7,13 @@ import Skills from './components/Skills.vue';
 import Projects from './components/Projects.vue';
 import { getJSON } from './utils/helpers';
 
-const data = ref<{ skills: SkillCategory[]; projects: Project[] }>({
-    skills: [],
-    projects: [],
-});
+const data = ref<{ jobs: Job[]; skills: SkillCategory[]; projects: Project[] }>(
+    {
+        jobs: [],
+        skills: [],
+        projects: [],
+    }
+);
 
 onMounted(async () => {
     data.value = await getJSON('/data.json');

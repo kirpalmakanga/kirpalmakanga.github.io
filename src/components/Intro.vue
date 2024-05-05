@@ -1,18 +1,39 @@
 <script setup lang="ts">
-import { scrollToId } from '../utils/helpers';
+import Page from './base/Page.vue';
 import Button from './base/Button.vue';
 import IconLink from './base/IconLink.vue';
+import { scrollToId } from '../utils/helpers';
+
+const tabs = [
+    {
+        id: 'skills',
+        title: 'Skills',
+    },
+    {
+        id: 'work',
+        title: 'Work',
+    },
+    {
+        id: 'projects',
+        title: 'Projects',
+    },
+    {
+        id: 'contact',
+        title: 'Contact',
+    },
+];
 </script>
 
 <template>
-    <section
-        ref="intro"
+    <Page
         id="intro"
-        class="min-h-[100vh] flex flex-col items-center justify-center text-center uppercase transition-opacity duration-500 ease-out"
+        class="flex flex-col items-center justify-center uppercase"
     >
-        <h1 class="text-[16rem]/[14rem] font-secondary">MK</h1>
+        <h1 class="text-[12rem]/[10rem] sm:text-[16rem]/[14rem] font-secondary">
+            MK
+        </h1>
 
-        <p class="text-2xl">Front-End web developer</p>
+        <p class="text-xl sm:text-2xl">Front-End web developer</p>
 
         <ul class="mt-8 flex justify-center gap-4">
             <li>
@@ -25,12 +46,14 @@ import IconLink from './base/IconLink.vue';
             </li>
         </ul>
 
-        <nav class="mt-8 flex gap-4">
-            <Button @click="scrollToId('skills')">Skills</Button>
-
-            <Button @click="scrollToId('projects')">Projects</Button>
-
-            <Button @click="scrollToId('contact')">Contact</Button>
+        <nav class="mt-8">
+            <ul class="flex flex-wrap justify-center gap-4">
+                <li v-for="{ id, title } of tabs">
+                    <Button class="text-sm sm:text-md" @click="scrollToId(id)">
+                        {{ title }}
+                    </Button>
+                </li>
+            </ul>
         </nav>
-    </section>
+    </Page>
 </template>
