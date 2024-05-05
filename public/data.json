@@ -2,13 +2,13 @@
     "jobs": [
         {
             "name": "Fullstack Javascript Developer",
-            "date": "December 2017 - January 2023",
+            "duration": "December 2017 - January 2023",
             "location": "Goomeo, Limoges",
             "description": "/jobs/2017-2023.md"
         },
         {
             "name": "Freelance Web Developer",
-            "date": "December 2017 - January 2023",
+            "duration": "December 2017 - January 2023",
             "location": "Limoges",
             "description": "/jobs/2013-2017.md"
         }

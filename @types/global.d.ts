@@ -3,7 +3,7 @@ export {};
 declare global {
     interface Job {
         name: string;
-        date: string;
+        duration: string;
         location: string;
         description: string;
     }
