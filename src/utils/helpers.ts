@@ -21,7 +21,13 @@ export function scrollToId(id: string) {
 }
 
 export async function getJSON(url: string) {
-    const response = await fetch('/data.json');
+    const response = await fetch(url);
 
     return await response.json();
+}
+
+export async function getText(url: string) {
+    const response = await fetch(url);
+
+    return await response.text();
 }

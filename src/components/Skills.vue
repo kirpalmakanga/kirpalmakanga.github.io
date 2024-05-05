@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import Page from './base/Page.vue';
 import Icon from './base/Icon.vue';
-import VisibilitySensor from './base/VisibilitySensor.vue';
+import VisibilitySensor from './base/Reveal.vue';
 
 defineProps<{ categories: SkillCategory[] }>();
 </script>

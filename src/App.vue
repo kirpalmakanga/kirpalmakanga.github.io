@@ -4,6 +4,7 @@ import Background from './components/Background.vue';
 import Intro from './components/Intro.vue';
 import Contact from './components/Contact.vue';
 import Skills from './components/Skills.vue';
+import Work from './components/Work.vue';
 import Projects from './components/Projects.vue';
 import { getJSON } from './utils/helpers';
 
@@ -25,6 +26,8 @@ onMounted(async () => {
 
     <main class="relative flex flex-col">
         <Intro />
+
+        <Work :items="data.jobs" />
 
         <Skills :categories="data.skills" />
 

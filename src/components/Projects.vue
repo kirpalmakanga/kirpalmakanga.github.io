@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import Page from './base/Page.vue';
 import ButtonLink from './base/ButtonLink.vue';
-import VisibilitySensor from './base/VisibilitySensor.vue';
+import VisibilitySensor from './base/Reveal.vue';
 
 defineProps<{ items: Project[] }>();
 </script>

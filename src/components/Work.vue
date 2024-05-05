@@ -1,53 +1,36 @@
 <script setup lang="ts">
 import Page from './base/Page.vue';
 import Icon from './base/Icon.vue';
-import VisibilitySensor from './base/VisibilitySensor.vue';
+import Markdown from './base/Markdown.vue';
+import Reveal from './base/Reveal.vue';
 
-defineProps<{ categories: SkillCategory[] }>();
+defineProps<{ items: Job[] }>();
 </script>
 
 <template>
     <Page id="work" title="Work">
-        <div class="container mx-auto">
-            <!-- <ul>
-                <li v-for="{ name, items } of categories" class="mb-16">
-                    <article>
-                        <h3 class="text-2xl mb-4">{{ name }}</h3>
+        <div class="md:w-2/3 lg:w-1/2 mx-auto">
+            <ul class="flex flex-col gap-8">
+                <li
+                    v-for="{ name, date, location, description } of items"
+                    class="flex"
+                >
+                    <Reveal class="flex-grow bg-primary-900 p-8 rounded shadow">
+                        <article>
+                            <p>{{ date }}</p>
 
-                        <ul
-                            class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 auto-rows-max gap-8"
-                        >
-                            <li v-for="{ name, level } of items" class="flex">
-                                <VisibilitySensor
-                                    class="flex-grow bg-primary-900 p-4 rounded shadow"
-                                >
-                                    <article>
-                                        <p class="text-xl">{{ name }}</p>
+                            <h3 class="text-2xl mb-4">{{ name }}</h3>
 
-                                        <ul
-                                            v-if="!isNaN(level)"
-                                            class="flex h-5 mt-4 whitespace-nowrap"
-                                        >
-                                            <li v-for="_ in level">
-                                                <Icon
-                                                    class="h-5 w-5"
-                                                    name="circle-plus"
-                                                />
-                                            </li>
-                                            <li v-for="_ in 10 - level">
-                                                <Icon
-                                                    class="h-5 w-5"
-                                                    name="circle"
-                                                />
-                                            </li>
-                                        </ul>
-                                    </article>
-                                </VisibilitySensor>
-                            </li>
-                        </ul>
-                    </article>
+                            <p class="font-bold">{{ location }}</p>
+
+                            <Markdown
+                                class="block prose-h4:text-xl prose-h4:mb-4 prose-h4:mt-8 prose-h4:opacity-80 prose-h5:mt-8 prose-h5:text-lg prose-h5:opacity-70 prose-ul:list-disc prose-ul:pl-5 prose-ul:mt-4 prose-ul:mb-8 prose-li:mt-2 prose-p:my-1 md:w-2/3"
+                                :url="description"
+                            />
+                        </article>
+                    </Reveal>
                 </li>
-            </ul> -->
+            </ul>
         </div>
     </Page>
 </template>
