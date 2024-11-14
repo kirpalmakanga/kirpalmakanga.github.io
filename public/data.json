@@ -92,7 +92,8 @@
         {
             "title": "MicroSpot",
             "desc": "Lightweight Spotify app",
-            "technologies": "Express, Nuxt 3, Windi CSS, Spotify API, TypeScript"
+            "technologies": "Express, Nuxt 3, Windi CSS, Spotify API, TypeScript",
+            "url": "https://microspot.netlify.app/"
         },
         {
             "title": "Alexandrie",
