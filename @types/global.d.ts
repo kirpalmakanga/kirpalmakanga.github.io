@@ -23,5 +23,6 @@ declare global {
         desc: string;
         technologies: string;
         url: string;
+        sourceUrl: string;
     }
 }

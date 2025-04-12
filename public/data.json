@@ -87,13 +87,15 @@
             "title": "MicroTube",
             "desc": "Lightweight YouTube app",
             "technologies": "Solid JS, Vite, Windi CSS, TypeScript, Youtube Data API, Youtube Player API",
-            "url": "https://microtube.netlify.app/"
+            "url": "https://microtube.netlify.app/",
+            "sourceUrl": "https://github.com/kirpalmakanga/microtube/"
         },
         {
             "title": "MicroSpot",
             "desc": "Lightweight Spotify app",
             "technologies": "Express, Nuxt 3, Windi CSS, Spotify API, TypeScript",
-            "url": "https://microspot.netlify.app/"
+            "url": "https://microspot.netlify.app/",
+            "sourceUrl": "https://github.com/kirpalmakanga/microspot/"
         },
         {
             "title": "Alexandrie",

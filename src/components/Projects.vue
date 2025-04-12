@@ -16,7 +16,13 @@ defineProps<{ items: Project[] }>();
             >
                 <li
                     class="flex"
-                    v-for="{ title, desc, technologies, url } of items"
+                    v-for="{
+                        title,
+                        desc,
+                        technologies,
+                        url,
+                        sourceUrl,
+                    } of items"
                 >
                     <VisibilitySensor
                         class="flex flex-col flex-grow bg-primary-900 rounded"
@@ -30,15 +36,30 @@ defineProps<{ items: Project[] }>();
                                 <p class="mt-4">{{ technologies }}</p>
                             </div>
 
-                            <ButtonLink
-                                class="self-end mt-4"
-                                v-if="url"
-                                :href="url"
-                                target="_blank"
-                                rel="noopener"
+                            <div
+                                v-if="url || sourceUrl"
+                                class="flex justify-end mt-4 gap-2"
                             >
-                                Demo
-                            </ButtonLink>
+                                <ButtonLink
+                                    class="self-end mt-4"
+                                    v-if="url"
+                                    :href="url"
+                                    target="_blank"
+                                    rel="noopener"
+                                >
+                                    Demo
+                                </ButtonLink>
+
+                                <ButtonLink
+                                    class="self-end mt-4"
+                                    v-if="sourceUrl"
+                                    :href="sourceUrl"
+                                    target="_blank"
+                                    rel="noopener"
+                                >
+                                    Source
+                                </ButtonLink>
+                            </div>
                         </article>
                     </VisibilitySensor>
                 </li>
