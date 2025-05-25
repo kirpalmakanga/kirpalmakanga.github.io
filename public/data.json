@@ -50,7 +50,7 @@
                 { "name": "Hapi", "level": 7 },
                 { "name": "Supabase", "level": 6 },
                 { "name": "Firebase", "level": 6 },
-                { "name": "Laravel", "level": 2 }
+                { "name": "Laravel", "level": 5 }
             ]
         },
         {
@@ -112,6 +112,11 @@
             "title": "Neptune",
             "desc": "Desktop music player",
             "technologies": "Solid JS, Windi CSS, TypeScript, Electron"
+        },
+        {
+            "title": "Invoicer",
+            "desc": "Basic invoice manager",
+            "technologies": "Next.js, Zustand, Tanstack Table, Shadcn, Tailwind, Laravel, SQLite"
         }
     ]
 }
