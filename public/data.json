@@ -93,7 +93,7 @@
         {
             "title": "MicroSpot",
             "desc": "Lightweight Spotify app",
-            "technologies": "Express, Nuxt 3, Windi CSS, Spotify API, TypeScript",
+            "technologies": "Nuxt 3, TailwindCSS, Tanstack Query, Spotify API, TypeScript",
             "url": "https://microspot.netlify.app/",
             "sourceUrl": "https://github.com/kirpalmakanga/microspot/"
         },
@@ -106,17 +106,26 @@
         {
             "title": "Discograph",
             "desc": "Music database",
-            "technologies": "Nuxt3, Tailwind, TypeScript, Supabase"
+            "technologies": "Nuxt3, Tailwind, TypeScript, Supabase",
+            "sourceUrl": "https://github.com/kirpalmakanga/discograph"
         },
         {
             "title": "Neptune",
             "desc": "Desktop music player",
-            "technologies": "Solid JS, Windi CSS, TypeScript, Electron"
+            "technologies": "Solid JS, Windi CSS, TypeScript, Electron",
+            "sourceUrl": "https://github.com/kirpalmakanga/neptune"
         },
         {
             "title": "Invoicer",
             "desc": "Basic invoice manager",
-            "technologies": "Next.js, Zustand, Tanstack Table, Shadcn, Tailwind, Laravel, SQLite"
+            "technologies": "Next.js, Zustand, Tanstack Table, Shadcn, Tailwind, Laravel, SQLite",
+            "sourceUrl": "https://github.com/kirpalmakanga/invoicer"
+        },
+        {
+            "title": "VCall",
+            "desc": "WebRTC video chat",
+            "technologies": "Vue 3, Express, Socket IO, Jose",
+            "sourceUrl": "https://github.com/kirpalmakanga/video-call"
         }
     ]
 }
